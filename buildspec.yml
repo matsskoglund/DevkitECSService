@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Stopping the service
       - aws ecs update-service --cluster devkit-api --service devkit-service --desired-count 0
+      - aws autoscaling --auto-scaling-group-name EC2ContainerService-devkit-api-EcsInstanceAsg-134070FPMLR8P --desired-capacity 0 --min-size 0 --max-size 0
   build:
     commands:
       - echo Build started on `date`
