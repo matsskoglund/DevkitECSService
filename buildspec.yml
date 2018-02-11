@@ -11,5 +11,5 @@ phases:
       - echo Build started on `date`
   post_build:
     commands:
-      - echo 'Finshed'
+      - echo 'Finished'
 
