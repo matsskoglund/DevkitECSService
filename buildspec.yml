@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Stopping the service
+      - aws ecs update-service --cluster devkit-api --service devkit-service --desired-count 0
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo 'Finshed'
+
