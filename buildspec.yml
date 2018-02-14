@@ -3,7 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo Build started on `date`
+      - echo started on `date`
       - echo Changing the desired count on tasks
       - aws ecs update-service --cluster devkit-api --service devkit-service --desired-count 1
       - echo Changing the desired count on aoutscaling group
