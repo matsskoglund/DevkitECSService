@@ -10,5 +10,5 @@ phases:
       - aws autoscaling update-auto-scaling-group --auto-scaling-group-name EC2ContainerService-devkit-api-EcsInstanceAsg-134070FPMLR8P --desired-capacity 2 --min-size 0 --max-size 4
   post_build:
     commands:
-      - echo 'Finished scaling'
+      - echo 'Finished scaling up/down'
 
