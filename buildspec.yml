@@ -7,7 +7,7 @@ phases:
       - echo Changing the desired count for tasks     
       - aws ecs update-service --cluster devkit-api --service devkit-service --desired-count 1
       - echo Changing the desired count for aoutscaling group
-      - aws autoscaling update-auto-scaling-group --auto-scaling-group-name EC2ContainerService-devkit-api-EcsInstanceAsg-134070FPMLR8P --desired-capacity 2 --min-size 0 --max-size 4
+      - aws autoscaling update-auto-scaling-group --auto-scaling-group-name EC2ContainerService-devkit-api-EcsInstanceAsg-134070FPMLR8P --desired-capacity 2 --min-size 1 --max-size 4
   post_build:
     commands:
       - echo 'Finished scaling up/down.'
